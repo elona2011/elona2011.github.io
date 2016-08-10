@@ -1,0 +1,765 @@
+<!doctype html>
+<html class="theme-next  theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+<meta name="description" content="&amp;lt;!DOCTYPE HTML&amp;gt;
+
+
+
+    
+    
+    我是学渣
+    
+    h1{
+    	text-align: center;
+    }
+
+	#toast{
+		min-width:10px;		
+		position: absolute;
+		top:-50px;
+		left:45%;
+		border:1px #ccc solid;
+		padding:10px 2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="亚木的前端之道">
+<meta property="og:url" content="http://elona2011.github.io/about/index.html">
+<meta property="og:site_name" content="亚木的前端之道">
+<meta property="og:description" content="&amp;lt;!DOCTYPE HTML&amp;gt;
+
+
+
+    
+    
+    我是学渣
+    
+    h1{
+    	text-align: center;
+    }
+
+	#toast{
+		min-width:10px;		
+		position: absolute;
+		top:-50px;
+		left:45%;
+		border:1px #ccc solid;
+		padding:10px 2">
+<meta property="og:updated_time" content="2015-11-15T15:51:26.044Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="亚木的前端之道">
+<meta name="twitter:description" content="&amp;lt;!DOCTYPE HTML&amp;gt;
+
+
+
+    
+    
+    我是学渣
+    
+    h1{
+    	text-align: center;
+    }
+
+	#toast{
+		min-width:10px;		
+		position: absolute;
+		top:-50px;
+		left:45%;
+		border:1px #ccc solid;
+		padding:10px 2">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'remove'
+  };
+</script>
+
+
+
+  <title>
+  
+
+  
+     | 亚木的前端之道
+  
+</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?eeb4365c48e9e9569f2c248f69ffc563";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="site-title">亚木的前端之道</span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-2x"></i>
+            
+            <span class="">首页</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-2x"></i>
+            
+            <span class="">关于</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-2x"></i>
+            
+            <span class="">归档</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-2x"></i>
+            
+            <span class="">标签</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wiki">
+          <a href="/wiki" rel="section">
+            
+              <i class="menu-item-icon fa fa-globe fa-2x"></i>
+            
+            <span class="">wiki</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-github">
+          <a href="https://github.com/elona2011" rel="section">
+            
+              <i class="menu-item-icon fa fa-github fa-2x"></i>
+            
+            <span class="">github</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-weibo">
+          <a href="http://weibo.com/u/2469552951" rel="section">
+            
+              <i class="menu-item-icon fa fa-weibo fa-2x"></i>
+            
+            <span class="">微博</span>
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-twitter">
+          <a href="https://twitter.com/cdszbjj" rel="section">
+            
+              <i class="menu-item-icon fa fa-twitter fa-2x"></i>
+            
+            <span class="">Twitter</span>
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+    
+      <!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>我是学渣</title>
+    <style type="text/css">
+    h1{
+    	text-align: center;
+    }
+
+	#toast{
+		min-width:10px;		
+		position: absolute;
+		top:-50px;
+		left:45%;
+		border:1px #ccc solid;
+		padding:10px 20px;
+		background-color: #000;
+		color: #fff;
+		border-radius: 10px;
+		display: none;
+	}
+	#heading{
+		width: 320px;
+		border: 0px #ccc solid;
+        margin: 0 auto;
+        padding: 10px 0px;
+	}
+    #tf_box {
+        width: 300px;
+        height: 300px;
+        border: 1px #ccc solid;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .div_box {
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 2px;
+        padding: 7px;
+        border: 1px solid #aaaaaa;
+    }
+    *[draggable=true] {
+	    -moz-user-select:none;
+	    -khtml-user-drag: element;
+	    cursor: move;
+	}
+	img {	    	   
+	    display:inline-block;
+	    transition: all 100ms;
+	    position: absolute;
+	}
+	img.move {
+	    -webkit-transform:scale3d( 1.1, 1.1, 1.1 );
+	}
+    </style>
+    
+</head>
+
+<body>
+
+	<h1>我是学渣</h1>
+		
+	<div id="toast">这里输出鼓励消息</div>
+
+    <div id="tf_box">
+    </div>
+	
+	<div id="heading">
+	    <input id="instruct" type="button" value="玩法说明">
+	    <input id="btn" type="button" value="复位">
+	    <div id="gameMsg" style="padding-top:10px;">
+	    	当前级别: <b>1</b><br>
+			当前移动次数: <b>0</b><br>
+			总计移动次数: <b>0</b><br>
+	    </div>
+    </div>
+
+
+</body>
+
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<script type="text/javascript">
+
+games = new GameBoard();
+games.beginGame();
+
+$('#btn').click(function() {
+	games.setupLevel();
+});
+$('#instruct').click(function() {
+	new cheesyWordGetter().instruct();
+});
+
+
+
+
+function cookieHelpers() {
+	//记录并输出每一步的信息
+	this.writeCookies = function(game) {		
+		var toWrite = "px=" +
+			game.level + " " +
+			game.totalClicks + " " +
+			game.currentClicks + " " +
+			game.dataY + " " +
+			game.pa + " " +
+			game.pb + " " +
+			game.dataP + " " +
+			";";
+		document.cookie = toWrite;
+		console.log(document.cookie);
+	}
+}
+
+
+function cheesyWordGetter() {
+	this.words = ['非常好', '干得漂亮', '帅呆了', '哇塞', 'I服U', '天才诞生了'];
+
+	/**
+	 * 页面过关鼓励提示
+	 * @return {[type]} [description]
+	 */
+	this.getWord = function() {
+		var _this = this;
+
+		$('#toast').html(_this.words[Math.floor(Math.random()*_this.words.length)]);
+
+		$('#toast').fadeIn().animate({top:"50px"}, "slow", function() {
+            $(this).animate({top: "-50px"}, 500).fadeOut();
+        });
+	}
+
+	/**
+	 * 玩法说明
+	 * @return {[type]} [description]
+	 */
+	this.instruct = function() {		
+		$('#gameMsg').html("如何才算赢：使拼板全部元素从小到大排列。拖动一个元素都另一个元素上，这两个元素就会交换位置。");
+	}
+
+	/**
+	 * 更新页面统计信息
+	 * @param  {[type]} game [description]
+	 * @return {[type]}      [description]
+	 */
+	this.updateCounts = function(game) {
+		var htmlMsg = "当前级别: <b>" + game.level + "</b><br>"+
+				      "当前移动次数: <b>" + game.currentClicks +"</b><br>"+
+					  "总计移动次数: <b>" + game.totalClicks + "</b><br>"+
+					  "";//this.dataY+"<br>"+this.dataP
+		$('#gameMsg').html(htmlMsg);
+
+	}
+}
+
+
+
+function GameBoard(){
+	var self = this;
+
+	this.cwg = new cheesyWordGetter();
+	this.cook = new cookieHelpers();
+	this.pa = '0';
+	this.pb = '0';
+	this.dataY = [];//原始序列
+	this.dataP = [];//排序序列
+	this.level = 1;//等级
+	this.currentClicks = 0; //当前移动次数
+	this.totalClicks = 0; //总计移动次数	
+
+	/**
+	 * 开始游戏
+	 * @return {[type]} [description]
+	 */
+	this.beginGame = function() {
+		var vv = self.createRandom(9,1,9);		
+		this.dataY = vv.toString();
+		this.dataP = vv;
+		this.cook.writeCookies(this);
+		self.renderBoard();
+	}
+
+	/**
+	 * 进入下一关
+	 * @return {[type]} [description]
+	 */
+	this.resetGame = function() {
+		this.level++;
+
+		var vv = self.createRandom(9,1,9+this.level);
+		this.dataY = vv.toString();
+		this.dataP = vv;
+
+		this.cook.writeCookies(this);
+		self.setupLevel();
+	}
+
+	/**
+	 * 复位
+	 * @return {[type]} [description]
+	 */
+	this.setupLevel = function(){
+		this.currentClicks = 0;//复位当前移动次数
+		self.renderBoard();
+        self.updateCounts();
+	}
+
+	/**
+	 * 产生不重复的随机数
+	 * @param  {[type]} num  [要产生多少个随机数]
+	 * @param  {[type]} from [产生随机数的最小值]
+	 * @param  {[type]} to   [产生随机数的最大值]
+	 * @return {[type]}      [description]
+	 */
+	this.createRandom = function(num ,from ,to){
+		var arr=[];
+		for(var i=from;i<=to;i++)
+			arr.push(i);
+		arr.sort(function(){
+			return 0.5-Math.random();
+		});
+		arr.length=num;
+		return arr;
+	}
+
+	/**
+	 * 初始画布	
+	 * @return {[type]}      [description]
+	 */
+	this.renderBoard = function(){
+		var html = '';
+		$.each(this.dataY.split(","),function(i,itme){
+			html+='<div class="div_box" >';
+	        html+='<img draggable="true" src="image/tf/'+itme+'.png" id="drag'+itme+'" data-num="'+itme+'" />';
+	        html+='</div>';
+		});
+		$('#tf_box').html("").append(html);
+
+		var fl = $('.div_box').find("img");
+		fl.each(function(index, el) {
+			var _this=$(this);
+			// console.log(_this.attr("data-num"));
+			var t = _this.position().top;
+			var l = _this.position().left;
+
+			_this.css({
+				"top": t+'px',
+				"left": l+'px'
+			});
+
+
+		});
+
+		self.isDrop();
+	}
+	
+	/**
+	 * 绑定拖动事件
+	 * @return {Boolean} [description]
+	 */
+	this.isDrop=function(){
+		var _this = this;
+	    var origin, is_moving = false;
+	    $("#tf_box").find("img").on("drop",
+	        function(e) {
+	        	_this.pa=$(origin).attr('data-num');
+	        	_this.pb=$(e.target).attr('data-num');
+	            var origin_pos = $(origin).position();
+	            var target_pos = $(e.target).position();
+
+	            $(origin).addClass("move").animate(target_pos, "fast",
+	                function() {
+	                    $(this).removeClass("move");
+	                });
+
+	            $(e.target).addClass("move").animate(origin_pos, "fast",
+	                function() {
+	                    $(this).removeClass("move");
+	                });
+
+	            self.updateCount();
+	        }).on("dragstart",
+	        function(e) {
+	            if (is_moving) {
+	                return false;
+	            }
+	            is_moving = true;
+	            e.originalEvent.dataTransfer.effectAllowed = 'move';
+	            origin = this;
+
+	        }).on("dragover",
+	        function(e) {
+	        	if (e.stopPropagation()) e.stopPropagation();
+	            if (e.preventDefault) e.preventDefault(); // allows us to drop
+	            is_moving = false;
+	            e.originalEvent.dataTransfer.dropEffect = 'move'; // only dropEffect='copy' will be dropable
+	        });
+    }
+
+    /**
+     * 更新统计数
+     * @return {[type]} [description]
+     */
+    this.updateCount = function() {
+		this.currentClicks++; //当前移动次数
+		this.totalClicks++; //总计移动次数
+		
+		self.isSort();
+		self.updateCounts();
+	}
+	this.updateCounts = function() {
+		this.cwg.updateCounts(this);
+		this.cook.writeCookies(this);
+	}
+
+	/**
+	 * 移动元素位置
+	 * @return {Boolean} [description]
+	 */
+	this.isSort = function(){
+		var _this=this;
+		
+		var a = this.pa;
+		var b = this.pb;
+
+		var arr = this.dataP;
+		
+		var i=0,len=arr.length,j,k;
+		for(;i<len;i++){
+			if(arr[i] == a)
+			{
+				j=i;
+			}
+			if(arr[i] == b)
+			{
+				k=i;
+			}
+		}
+		i=arr[j];
+		arr[j]=arr[k];
+		arr[k]=i;
+
+		self.ifSort();
+	}
+
+	/**
+	 * 判断元素是否序列排序
+	 * @return {[type]} [description]
+	 */
+	this.ifSort = function(){
+		var bo = false;
+		var arr = this.dataP;
+		for(var i=0;i<arr.length-1;i++){			
+			if(arr[i]>arr[i+1]){
+				bo = false;
+				return;
+			}else{
+				bo = true;
+			}			
+		}
+		if(bo){
+			this.cwg.getWord();
+			self.resetGame();
+		}
+	}
+}
+</script>
+
+</html>
+
+    
+  </div>
+
+ </div>
+
+        
+
+        
+          <div class="comments" id="comments">
+            
+          </div>
+        
+      </div>
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">亚木</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+    
+
+  
+
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  
+
+  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.5.2" id="motion.fallback"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+
+      motionIntegrator.bootstrap();
+    });
+  </script>
+
+  
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
