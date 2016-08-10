@@ -350,9 +350,9 @@
 <h1 id="分组">分组</h1><p><code>/(ab)+/</code> 匹配一个或多个连续出现的ab</p>
 <h1 id="或操作">或操作</h1><p><code>/(ab)+|(cd)+/</code> 匹配出现一次或多次的ab或cd<br><code>/ab|cd/</code> 匹配ab或者cd<br><code>/a(b|c)d/</code> 匹配abd或acd</p>
 <h1 id="反向引用">反向引用</h1><p><code>/^([dtn])a\1/</code> 匹配a前后的字母相同,如dad</p>
-<h1 id="后行断言">后行断言</h1><p>x(?!y) x只有不在y前面才匹配，y不会被计入返回结果<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/\d+(?!\.)/</span>.exec(<span class="string">'3.14'</span>) <span class="regexp">//</span> [<span class="string">"14"</span>]</span><br></pre></td></tr></table></figure></p>
+<h1 id="后行断言">后行断言</h1><p>x(?!y) x只有不在y前面才匹配，y不会被计入返回结果<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/\d+(?!\.)/</span>.exec(<span class="string">'3.14'</span>) <span class="regexp">//</span> [<span class="string">"14"</span>]</div></pre></td></tr></table></figure></p>
 <h1 id="尾部标志">尾部标志</h1><p>i 不区分大小写<br>g 匹配所有，而不是第一个<br>m 允许匹配多行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/<span class="built_in">test</span>/ig</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/<span class="built_in">test</span>/ig</div></pre></td></tr></table></figure>
 <h1 id="RegExp">RegExp</h1><p><code>(new RegExp(&#39;1\\+1&#39;)).test(&#39;1+1&#39;)</code> 转义需要两个\</p>
 
       
