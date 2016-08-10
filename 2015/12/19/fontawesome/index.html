@@ -64,6 +64,7 @@
 官网http://www.bootcss.com/p/font-awesome/http://fontawesome.io
 原理在使用了Font Awesome的网页上审查图标元素，看不到任何image引用，原因就是它使用了字体库
 打开Font Awesome的源">
+<meta name="twitter:image" content="http://elona2011.github.io/2015/12/19/fontawesome/2.png">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -285,9 +286,9 @@
 <h1 id="官网">官网</h1><p><a href="http://www.bootcss.com/p/font-awesome/" target="_blank" rel="external">http://www.bootcss.com/p/font-awesome/</a><br><a href="http://fontawesome.io" target="_blank" rel="external">http://fontawesome.io</a></p>
 <h1 id="原理">原理</h1><p>在使用了Font Awesome的网页上审查图标元素，看不到任何image引用，原因就是它使用了字体库</p>
 <p>打开Font Awesome的源码<br><code>@font-face</code> 定义外部引用字体<br><code>.fa</code> 定义图标的基础样式<br><code>.fa-lg .fa-2x .fa-4x ...</code> 定义图标大小样式<br><img src="/2015/12/19/fontawesome/2.png" alt="2.png" title=""></p>
-<p>实际的图标就是在content属性通过转义的字符串引用<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.fa-lock</span><span class="pseudo">:before</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"\f023"</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>实际的图标就是在content属性通过转义的字符串引用<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.fa-lock</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"\f023"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <img src="/2015/12/19/fontawesome/1.png" alt="1.png" title="">
-<h1 id="使用">使用</h1><p>使用就非常简单了，直接引用相应的图标class，大小class，效果class即可<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">i</span> <span class="attribute">class</span>=<span class="value">"fa fa-link fa-2x"</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span> 链接<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="使用">使用</h1><p>使用就非常简单了，直接引用相应的图标class，大小class，效果class即可<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-link fa-2x"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> 链接<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h1 id="深入阅读">深入阅读</h1><p><a href="http://www.verydemo.com/demo_c447_i8251.html" target="_blank" rel="external">http://www.verydemo.com/demo_c447_i8251.html</a><br><a href="http://www.jb51.net/css/70033.html" target="_blank" rel="external">http://www.jb51.net/css/70033.html</a></p>
 </span>
       

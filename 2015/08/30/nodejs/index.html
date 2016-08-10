@@ -291,8 +291,8 @@ nvm的安装后，运行node程序可能会导致如下错误1/usr/bin/env: node
       
 
       
-        <span itemprop="articleBody"><h2 id="nvm">nvm</h2><p>install nvm:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -<span class="keyword">o</span>- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/creationix/nvm/v0.<span class="number">29.0</span>/install.<span class="keyword">sh</span> | bash</span><br></pre></td></tr></table></figure></p>
-<p>nvm的安装后，运行node程序可能会导致如下错误<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/env: <span class="keyword">node</span><span class="identifier"></span><span class="title">: 没有那个文件或目录</span></span><br></pre></td></tr></table></figure></p>
+        <span itemprop="articleBody"><h2 id="nvm">nvm</h2><p>install nvm:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -<span class="keyword">o</span>- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/creationix/nvm/v0.<span class="number">29.0</span>/install.<span class="keyword">sh</span> | bash</div></pre></td></tr></table></figure></p>
+<p>nvm的安装后，运行node程序可能会导致如下错误<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/env: <span class="keyword">node</span><span class="title">: 没有那个文件或目录</span></div></pre></td></tr></table></figure></p>
 <p>临时使用：<br>1 <code>nvm ls</code>查看当前使用版本<br>2 如果没有绿色箭头指向某个版本，则<code>nvm use 0.12</code><br>长久解决:<br><code>$ nvm alias default 0.12</code><br>from: <a href="https://github.com/alsotang/node-lessons/tree/master/lesson0" target="_blank" rel="external">https://github.com/alsotang/node-lessons/tree/master/lesson0</a></p>
 <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <h1 id="npm">npm</h1><p><code>npm install -d</code> 显示安装日志</p>
@@ -315,7 +315,7 @@ nvm的安装后，运行node程序可能会导致如下错误1/usr/bin/env: node
 <p><code>npm config set registry http://registry.cnpmjs.org</code> 国内源<br><code>npm config set registry &quot;http://registry.npmjs.org/&quot;</code> 官方源</p>
 <p>如果卡顿，可尝试关闭https npm config set strict-ssl false</p>
 <h2 id="cnpm">cnpm</h2><p> 1.安装cnpm工具 npm install -g cnpm –registry=<a href="http://r.cnpmjs.org" target="_blank" rel="external">http://r.cnpmjs.org</a> 或npm install -g cnpm –registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="external">http://registry.npm.taobao.org</a><br> 2.使用cnpm安装模块 cnpm install xxx 原文：<a href="http://segmentfault.com/a/1190000000471219" target="_blank" rel="external">http://segmentfault.com/a/1190000000471219</a></p>
-<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install microtime --<span class="keyword">registry</span>=<span class="keyword">http</span>://r.cnpmjs.org --disturl=<span class="keyword">http</span>://dist.cnpmjs.org</span><br></pre></td></tr></table></figure>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install microtime --<span class="keyword">registry</span>=<span class="keyword">http</span>://r.cnpmjs.org --disturl=<span class="keyword">http</span>://dist.cnpmjs.org</div></pre></td></tr></table></figure>
 <p>grunt-cli会执行当前目录中package.json文件指定的grunt版本，来读取当前目录下的gruntfile的配置文件，然后按其中的配置项来执行自动化。 之所以这样是为了多个grunt版本并存，来支持新老项目。</p>
 </span>
       

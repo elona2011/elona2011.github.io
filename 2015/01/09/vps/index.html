@@ -59,6 +59,7 @@
 <meta name="twitter:title" content="VPS上搭建简易Blog">
 <meta name="twitter:description" content="VPS网上推荐的VPS主要有三款：Linode, DigitalOcean, Bandwagon我先开的DigitalOcean，大概一个月30元。后来看到Bandwagon太便宜了，一年只要60多，忍不住也开了。两个VPS都是最低配，5G硬盘，512RAM，带宽流量肯定用不完，用来搭一个简单的BLOG足够了。实测速度两者也几乎一样，之后使用过程中感觉Bandwagon还更稳定一些。
 系统安装Ba">
+<meta name="twitter:image" content="http://elona2011.github.io/2015/01/09/vps/1.png">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -281,10 +282,10 @@
 <p>以下以Bandwagon为例：<br>修改root密码<br><img src="/2015/01/09/vps/1.png" alt="1.png" title=""></p>
 <h1 id="LNMP安装">LNMP安装</h1><p><a href="http://lnmp.org/install.html" target="_blank" rel="external">LNMP一键安装包</a></p>
 <h1 id="Blog系统">Blog系统</h1><p>我个人使用的是hexo静态博客系统，优点是简单方便，将生成的public文件夹下的内容全部上传到VPS的/home/wwwroot/default/目录下即可。<br>具体一些使用方法可参考：<a href="/2015/01/08/hexo/">使用hexo布置blog</a></p>
-<h1 id="远程连接">远程连接</h1><p>ubuntu下使用ssh命令和scp命令，ssh用于远程控制VPS，scp远程拷贝文件<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -p <span class="number">12345</span> <span class="number">123.123</span><span class="number">.123</span><span class="number">.123</span>  <span class="preprocessor">#<span class="number">12345</span>是端口号</span></span><br><span class="line">$ scp -r -P <span class="number">12345</span> * username@<span class="number">123.123</span><span class="number">.123</span><span class="number">.123</span>:/home/wwwroot/<span class="keyword">default</span>/</span><br></pre></td></tr></table></figure></p>
+<h1 id="远程连接">远程连接</h1><p>ubuntu下使用ssh命令和scp命令，ssh用于远程控制VPS，scp远程拷贝文件<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>ssh -p <span class="number">12345</span> <span class="number">123.123</span>.<span class="number">123.123</span>  <span class="comment">#12345是端口号</span></div><div class="line"><span class="variable">$ </span>scp -r -P <span class="number">12345</span> * username<span class="variable">@123</span>.<span class="number">123.123</span>.<span class="number">123</span><span class="symbol">:/home/wwwroot/default/</span></div></pre></td></tr></table></figure></p>
 <p>windows下可使用putty，ftp等工具</p>
 <h1 id="域名绑定">域名绑定</h1><p>域名解析里绑定VPS的IP<br><img src="/2015/01/09/vps/2.png" alt="2.png" title=""></p>
-<p>这时可能会出现用IP可以访问，但是用域名却出现403 forbidden，原因主要是nginx.conf没配置好<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ nginx -t  #显示nginx.<span class="keyword">conf</span>路径</span><br><span class="line">$ vi /usr/<span class="keyword">local</span>/nginx/<span class="keyword">conf</span>/nginx.<span class="keyword">conf</span></span><br></pre></td></tr></table></figure></p>
+<p>这时可能会出现用IP可以访问，但是用域名却出现403 forbidden，原因主要是nginx.conf没配置好<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ nginx -t  #显示nginx.<span class="keyword">conf</span>路径</div><div class="line">$ vi /usr/<span class="keyword">local</span>/nginx/<span class="keyword">conf</span>/nginx.<span class="keyword">conf</span></div></pre></td></tr></table></figure></p>
 <p>所有绑定的www开头和无www开头的域名都要在server_name后设置<br><img src="/2015/01/09/vps/3.png" alt="3.png" title=""></p>
 </span>
       

@@ -61,7 +61,7 @@ git stage同git add，文件快照
 git commit1git commit -a
 递交所有内容
 提交到远程库">
-<meta property="og:updated_time" content="2016-02-28T15:09:19.805Z">
+<meta property="og:updated_time" content="2016-08-10T09:12:28.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git & SVN">
 <meta name="twitter:description" content="添加SSH keyshttps://help.github.com/articles/generating-ssh-keys/
@@ -304,14 +304,15 @@ git commit1git commit -a
 
       
         <span itemprop="articleBody"><h1 id="添加SSH_keys">添加SSH keys</h1><p><a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">https://help.github.com/articles/generating-ssh-keys/</a></p>
-<h2 id="远程库克隆">远程库克隆</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">&lt;SSH</span> <span class="keyword">clone</span> <span class="title">URL</span>&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="远程库克隆">远程库克隆</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> <span class="title">&lt;SSH</span> <span class="keyword">clone</span> <span class="title">URL</span>&gt;</div></pre></td></tr></table></figure>
 <p><ssh clone="" url=""> 在github相应仓库首页右侧点击SSH clone URL的复制按钮</ssh></p>
 <h2 id="git_stage">git stage</h2><p>同git add，文件快照</p>
-<h2 id="git_commit">git commit</h2><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -<span class="literal">a</span></span><br></pre></td></tr></table></figure>
+<h2 id="git_commit">git commit</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git commit <span class="_">-a</span></div></pre></td></tr></table></figure>
 <p>递交所有内容</p>
-<h2 id="提交到远程库">提交到远程库</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> <span class="keyword">push </span>origin master</span><br></pre></td></tr></table></figure>
+<h2 id="提交到远程库">提交到远程库</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> master</div></pre></td></tr></table></figure>
 <h1 id="远程库">远程库</h1><h2 id="首次git">首次git</h2><p>最好先设置好ssh key, 并在github中创建一个新仓库, 复制SSH地址, 下面是本地操作<br><code>cd blog</code> 进入要git的目录下<br><code>git init</code> 创建初始版本库<br><code>git add .</code> 将当前目录及子目录的所有文件添加到暂存区<br><code>git commit -m &#39;init repo&#39;</code> 提交暂存区到仓库区<br><code>git status</code> 查看暂存区<br><code>git remote add origin git@github.com:elona2011/blog.git</code> 添加远程库地址<br><code>git push -u origin master</code> 推送本地内容, -u是关联分支, 以后直接用<code>git push</code>即可</p>
 <h2 id="之后git">之后git</h2><p><code>git add .</code><br><code>git commit -m &#39;xxx comment&#39;</code><br><code>git push</code></p>
+<h1 id="Troubleshooting">Troubleshooting</h1><p>更新ssh key，导致无法push<br><a href="http://stackoverflow.com/questions/23749886/git-unable-to-resolve-references-when-pushing" target="_blank" rel="external">http://stackoverflow.com/questions/23749886/git-unable-to-resolve-references-when-pushing</a></p>
 <h1 id="SVN">SVN</h1><p><a href="http://my.oschina.net/donhui/blog/385452" target="_blank" rel="external">http://my.oschina.net/donhui/blog/385452</a></p>
 </span>
       
