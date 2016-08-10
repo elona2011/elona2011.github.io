@@ -1,11 +1,16 @@
 <!doctype html>
-<html class="theme-next  theme-next-mist">
-<head>
+
+
+
   
 
-<meta charset="UTF-8"/>
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,20 +23,49 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
 
 
 
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="bug," />
@@ -40,7 +74,14 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
 
 
 <meta name="description" content="hexo1&amp;#123;&amp;#123;&amp;#125;&amp;#125;
@@ -58,29 +99,26 @@
 如果不加代码高亮,将引起如下错误Template render error: unexpected token: }}    at Error.exports.TemplateError (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/lib.js">
 
 
+
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: 'remove'
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
-
-
 
   <title> bug收集 | 亚木的前端之道 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -98,7 +136,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -107,7 +154,9 @@
 
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">亚木的前端之道</span>
+      <span class="logo-line-after"><i></i></span>
     </a>
   </div>
   <p class="site-subtitle"></p>
@@ -125,25 +174,15 @@
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-2x"></i>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            <span class="">首页</span>
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-2x"></i>
-            
-            <span class="">关于</span>
+            首页
           </a>
         </li>
       
@@ -151,9 +190,9 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-2x"></i>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            <span class="">归档</span>
+            归档
           </a>
         </li>
       
@@ -161,54 +200,13 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-2x"></i>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            <span class="">标签</span>
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-wiki">
-          <a href="/wiki" rel="section">
-            
-              <i class="menu-item-icon fa fa-globe fa-2x"></i>
-            
-            <span class="">wiki</span>
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-github">
-          <a href="https://github.com/elona2011" rel="section">
-            
-              <i class="menu-item-icon fa fa-github fa-2x"></i>
-            
-            <span class="">github</span>
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-weibo">
-          <a href="http://weibo.com/u/2469552951" rel="section">
-            
-              <i class="menu-item-icon fa fa-weibo fa-2x"></i>
-            
-            <span class="">微博</span>
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-twitter">
-          <a href="https://twitter.com/cdszbjj" rel="section">
-            
-              <i class="menu-item-icon fa fa-twitter fa-2x"></i>
-            
-            <span class="">Twitter</span>
+            标签
           </a>
         </li>
       
 
-      
       
     </ul>
   
@@ -221,11 +219,17 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
 
+  
+  
+
+  
   
   
 
@@ -248,7 +252,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-04T22:21:17+08:00" content="2015-11-04">
               2015-11-04
             </time>
@@ -256,7 +263,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/bug/" itemprop="url" rel="index">
@@ -277,22 +288,39 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><h1 id="hexo">hexo</h1><figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;&#125;&#125;</div></pre></td></tr></table></figure>
+        <h1 id="hexo">hexo</h1><figure class="highlight clojure"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;&#123;&#125;&#125;</div></pre></td></tr></table></figure>
 <p>如果不加代码高亮,将引起如下错误<br>Template render error: unexpected token: }}<br>    at Error.exports.TemplateError (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/<font color="red">nunjucks</font>/src/lib.js:51:19)<br>    at Object.extend.fail (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:64:15)<br>    at Object.extend.parsePrimary (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:947:18)<br>    at Object.extend.parseUnary (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:882:25)<br>    at Object.extend.parsePow (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:856:25)<br>    at Object.extend.parseMod (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:844:25)<br>    at Object.extend.parseFloorDiv (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:832:25)<br>    at Object.extend.parseDiv (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:820:25)<br>    at Object.extend.parseMul (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:808:25)<br>    at Object.extend.parseSub (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:796:25)<br>    at Object.extend.parseAdd (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:784:25)<br>    at Object.extend.parseCompare (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:751:25)<br>    at Object.extend.parseIn (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:720:23)<br>    at Object.extend.parseNot (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:716:21)<br>    at Object.extend.parseAnd (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:698:25)<br>    at Object.extend.parseOr (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:686:25)<br>    at Object.extend.parseInlineIf (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:668:25)<br>    at Object.extend.parseExpression (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:663:25)<br>    at Object.extend.parseNodes (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1158:30)<br>    at Object.extend.parseAsRoot (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1177:42)<br>    at Object.module.exports.parse (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1199:18)<br>    at Object.module.exports.compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/compiler.js:1118:48)<br>    at Obj.extend._compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:444:35)<br>    at Obj.extend.compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:433:18)<br>    at null.<anonymous> (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:378:22)<br>    at Object.exports.withPrettyErrors (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/lib.js:24:16)<br>    at Obj.extend.render (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:374:20)<br>    at Obj.extend.renderString (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:261:21)<br>    at /media/nari/工作/blog/blog/node_modules/hexo/lib/extend/tag.js:56:9<br>    at tryCatcher (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/util.js:26:23)<br>    at Promise._resolveFromResolver (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:480:31)<br>    at new Promise (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:70:37)<br>    at Tag.render (/media/nari/工作/blog/blog/node_modules/hexo/lib/extend/tag.js:55:10)<br>    at Object.tagFilter [as onRenderEnd] (/media/nari/工作/blog/blog/node_modules/hexo/lib/hexo/post.js:253:16)<br>    at /media/nari/工作/blog/blog/node_modules/hexo/lib/hexo/render.js:55:19<br>    at tryCatcher (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/util.js:26:23)<br>    at Promise._settlePromiseFromHandler (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:507:31)<br>    at Promise._settlePromiseAt (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:581:18)<br>    at Promise._settlePromises (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:697:14)<br>    at Async._drainQueue (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:123:16)<br>    at Async._drainQueues (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:133:10)<br>    at Immediate.Async.drainQueues [as _onImmediate] (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:15:14)<br>    at processImmediate [as _immediateCallback] (timers.js:367:17)</anonymous></p>
 <figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span>&gt;&#123;&#123;visible?<span class="string">'&amp;blacktriangledown;'</span>:<span class="string">'&amp;blacktriangleright;'</span>&#125;&#125;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
 <p>如果不加代码高亮,将引起如下错误<br>Template render error: expected variable end<br>    at Error.exports.TemplateError (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/lib.js:51:19)<br>    at Object.extend.fail (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:64:15)<br>    at Object.extend.advanceAfterVariableEnd (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:133:18)<br>    at Object.extend.parseNodes (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1159:22)<br>    at Object.extend.parseAsRoot (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1177:42)<br>    at Object.module.exports.parse (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/parser.js:1199:18)<br>    at Object.module.exports.compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/compiler.js:1118:48)<br>    at Obj.extend._compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:444:35)<br>    at Obj.extend.compile (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:433:18)<br>    at null.<anonymous> (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:378:22)<br>    at Object.exports.withPrettyErrors (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/lib.js:24:16)<br>    at Obj.extend.render (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:374:20)<br>    at Obj.extend.renderString (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/nunjucks/src/environment.js:261:21)<br>    at /media/nari/工作/blog/blog/node_modules/hexo/lib/extend/tag.js:56:9<br>    at tryCatcher (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/util.js:26:23)<br>    at Promise._resolveFromResolver (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:480:31)<br>    at new Promise (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:70:37)<br>    at Tag.render (/media/nari/工作/blog/blog/node_modules/hexo/lib/extend/tag.js:55:10)<br>    at Object.tagFilter [as onRenderEnd] (/media/nari/工作/blog/blog/node_modules/hexo/lib/hexo/post.js:253:16)<br>    at /media/nari/工作/blog/blog/node_modules/hexo/lib/hexo/render.js:55:19<br>    at tryCatcher (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/util.js:26:23)<br>    at Promise._settlePromiseFromHandler (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:507:31)<br>    at Promise._settlePromiseAt (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:581:18)<br>    at Promise._settlePromises (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/promise.js:697:14)<br>    at Async._drainQueue (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:123:16)<br>    at Async._drainQueues (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:133:10)<br>    at Immediate.Async.drainQueues [as _onImmediate] (/media/nari/工作/blog/blog/node_modules/hexo/node_modules/bluebird/js/main/async.js:15:14)<br>    at processImmediate [as _immediateCallback] (timers.js:367:17)</anonymous></p>
-</span>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -337,27 +365,124 @@
     </div>
   </div>
 
- </div>
 
-        
-
-        
-          <div class="comments" id="comments">
-            
           </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
         
-      </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
 
       
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="亚木" />
+          <p class="site-author-name" itemprop="name">亚木</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo"><span class="nav-number">1.</span> <span class="nav-text">hexo</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
   &copy;  2015 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">亚木</span>
 </div>
@@ -369,234 +494,100 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+        
 
- </div>
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
-  
-  
-    
-    
-
-  
-
-
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  
-
-  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.5.2" id="motion.fallback"></script>
-
-
-
-
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
-      }
-    }
-  });
-</script>
+  
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
 
-      motionIntegrator.bootstrap();
-    });
-  </script>
+
 
   
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
 </body>
 </html>

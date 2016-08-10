@@ -1,20 +1,7 @@
+/* global NexT: true */
+
 $(document).ready(function () {
-  var motionIntegrator = {
-    queue: [],
-    cursor: -1,
-    add: function (fn) {
-      this.queue.push(fn);
-      return this;
-    },
-    next: function () {
-      this.cursor++;
-      var fn = this.queue[this.cursor];
-      $.isFunction(fn) && fn(motionIntegrator);
-    },
-    bootstrap: function () {
-      this.next();
-    }
-  };
+  NexT.motion = {};
 
   var sidebarToggleLines = {
     lines: [],
@@ -91,7 +78,7 @@ $(document).ready(function () {
   sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '320px';
-  var SIDEBAR_DISPLAY_DURATION = 300;
+  var SIDEBAR_DISPLAY_DURATION = 200;
 
   var sidebarToggleMotion = {
     toggleEl: $('.sidebar-toggle'),
@@ -104,7 +91,7 @@ $(document).ready(function () {
 
       $(document)
         .on('sidebar.isShowing', function () {
-          isDesktop() && $('body').velocity('stop').velocity(
+          NexT.utils.isDesktop() && $('body').velocity('stop').velocity(
             {paddingRight: SIDEBAR_WIDTH},
             SIDEBAR_DISPLAY_DURATION
           );
@@ -141,7 +128,13 @@ $(document).ready(function () {
           begin: function () {
             $('.sidebar .motion-element').velocity(
               'transition.slideRightIn',
-              {stagger: 50, drag: true}
+              {
+                stagger: 50,
+                drag: true,
+                complete: function () {
+                  self.sidebarEl.trigger('sidebar.motion.complete');
+                }
+              }
             );
           },
           complete: function () {
@@ -154,7 +147,7 @@ $(document).ready(function () {
       this.sidebarEl.trigger('sidebar.isShowing');
     },
     hideSidebar: function () {
-      isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
+      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
       this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
       this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
 
@@ -172,8 +165,26 @@ $(document).ready(function () {
       }
     }
   };
+  sidebarToggleMotion.init();
 
-  var motionMiddleWares = {
+  NexT.motion.integrator = {
+    queue: [],
+    cursor: -1,
+    add: function (fn) {
+      this.queue.push(fn);
+      return this;
+    },
+    next: function () {
+      this.cursor++;
+      var fn = this.queue[this.cursor];
+      $.isFunction(fn) && fn(NexT.motion.integrator);
+    },
+    bootstrap: function () {
+      this.next();
+    }
+  };
+
+  NexT.motion.middleWares =  {
     logo: function (integrator) {
       var sequence = [];
       var $brand = $('.brand');
@@ -185,13 +196,13 @@ $(document).ready(function () {
       $brand.size() > 0 && sequence.push({
         e: $brand,
         p: {opacity: 1},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
-      isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
+      NexT.utils.isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
       sequence.push(
-        getMistLineSettings($logoLineTop, "100%"),
-        getMistLineSettings($logoLineBottom, "-100%")
+        getMistLineSettings($logoLineTop, '100%'),
+        getMistLineSettings($logoLineBottom, '-100%')
       );
 
       hasElement($title) && sequence.push({
@@ -203,7 +214,7 @@ $(document).ready(function () {
       hasElement($subtitle) && sequence.push({
         e: $subtitle,
         p: {opacity: 1, top: 0},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
       if (sequence.length > 0) {
@@ -243,6 +254,7 @@ $(document).ready(function () {
     menu: function (integrator) {
       $('.menu-item').velocity('transition.slideDownIn', {
         display: null,
+        duration: 200,
         complete: function () {
           integrator.next();
         }
@@ -257,7 +269,7 @@ $(document).ready(function () {
 
       function postMotion () {
         var postMotionOptions = window.postMotionOptions || {
-            stagger: 300,
+            stagger: 100,
             drag: true
           };
         postMotionOptions.complete = function () {
@@ -268,26 +280,12 @@ $(document).ready(function () {
       }
     },
 
-    backToTop: function (integrator) {
-      var b2top = $('.back-to-top');
-      b2top.on('click', function () {
-        $('body').velocity('scroll');
-      });
-      integrator.next();
-    },
-
-    sidebarToggle: function (integrator) {
-      sidebarToggleMotion.init();
+    sidebar: function (integrator) {
+      if (CONFIG.sidebar.display === 'always') {
+        NexT.utils.displaySidebar();
+      }
       integrator.next();
     }
   };
 
-  motionIntegrator
-    .add(motionMiddleWares.logo)
-    .add(motionMiddleWares.menu)
-    .add(motionMiddleWares.sidebarToggle)
-    .add(motionMiddleWares.backToTop)
-    .add(motionMiddleWares.postList);
-
-  window.motionIntegrator = motionIntegrator;
 });
