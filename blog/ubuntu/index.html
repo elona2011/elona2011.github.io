@@ -1,0 +1,650 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="ubuntu," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="快捷键Ctrl+Alt+t 弹出终端Ctrl+t 新建标签页Ctrl+w 关闭当前标签页Ctrl+Tab 往右切换一个标签页
+launcher自定义sh12345678sudo -i gedit /usr/share/applications/name.desktop[Desktop Entry]Type=ApplicationTerminal=trueName=unmount-mountIcon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令及Ubuntu">
+<meta property="og:url" content="http://elona2011.github.io/blog/ubuntu/index.html">
+<meta property="og:site_name" content="亚木的前端之道">
+<meta property="og:description" content="快捷键Ctrl+Alt+t 弹出终端Ctrl+t 新建标签页Ctrl+w 关闭当前标签页Ctrl+Tab 往右切换一个标签页
+launcher自定义sh12345678sudo -i gedit /usr/share/applications/name.desktop[Desktop Entry]Type=ApplicationTerminal=trueName=unmount-mountIcon">
+<meta property="og:updated_time" content="2016-02-28T15:07:42.395Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux命令及Ubuntu">
+<meta name="twitter:description" content="快捷键Ctrl+Alt+t 弹出终端Ctrl+t 新建标签页Ctrl+w 关闭当前标签页Ctrl+Tab 往右切换一个标签页
+launcher自定义sh12345678sudo -i gedit /usr/share/applications/name.desktop[Desktop Entry]Type=ApplicationTerminal=trueName=unmount-mountIcon">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Linux命令及Ubuntu | 亚木的前端之道 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?eeb4365c48e9e9569f2c248f69ffc563";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">亚木的前端之道</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wiki">
+          <a href="/wiki" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.wiki
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-github">
+          <a href="https://github.com/elona2011" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.github
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-weibo">
+          <a href="http://weibo.com/u/2469552951" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.weibo
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-twitter">
+          <a href="https://twitter.com/cdszbjj" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.twitter
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux命令及Ubuntu
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-03-02T22:21:45+08:00" content="2015-03-02">
+              2015-03-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="快捷键">快捷键</h1><p><code>Ctrl+Alt+t</code> 弹出终端<br><code>Ctrl+t</code> 新建标签页<br><code>Ctrl+w</code> 关闭当前标签页<br><code>Ctrl+Tab</code> 往右切换一个标签页</p>
+<h2 id="launcher自定义sh">launcher自定义sh</h2><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">sudo -i gedit <span class="regexp">/usr/</span>share<span class="regexp">/applications/</span>name.desktop</div><div class="line"></div><div class="line">[Desktop Entry]</div><div class="line">Type=Application</div><div class="line">Terminal=<span class="keyword">true</span></div><div class="line">Name=unmount-mount</div><div class="line">Icon=<span class="regexp">/path/</span>to<span class="regexp">/icon/i</span>con.svg</div><div class="line">Exec=<span class="regexp">/path/</span>to<span class="regexp">/file/m</span>ount-unmount.sh</div></pre></td></tr></table></figure>
+<p>保存后将新创建的图标拖到launcher上</p>
+<h1 id="文件">文件</h1><p><code>ln -s /media/nari/</code> #在当前文件夹创建软链接到/media/nari/</p>
+<p><code>du -sh .</code> 当前目录总大小(包括子目录)<br><code>du -h -d 1 --all</code> 当前目录下的所有目录和文件的大小<br><code>du -sh .[^.]*</code> 当前目录下的所有隐藏目录和文件的大小<br><code>df -h</code> 显示挂载的所有文件系统的用量</p>
+<p><code>rm -rf</code> 删除目录和文件及子目录和子文件(小心操作)</p>
+<p><code>mount /dev/cdrom /mnt</code> 挂载光驱到/mnt<br><code>sudo mount /dev/sdb1 /media/work</code> 挂载sdb1分区<br><code>umount /dev/sdb1</code> 卸载分区，已挂载的分区在/etc/mtab文件中</p>
+<p>开机自动挂载分区<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ sudo fdisk -l  #查看分区</div><div class="line">...</div><div class="line">设备       启动      Start     末尾     扇区   Size Id 类型</div><div class="line">/dev/sdb1  *            <span class="number">63</span>  <span class="number">629153594</span>  <span class="number">629153532</span>   <span class="number">300</span>G  <span class="number">7</span> HPFS/NTFS/exFAT</div><div class="line">/dev/sdb2        <span class="number">629153656</span> <span class="number">1953523711</span> <span class="number">1324370056</span> <span class="number">631.5</span>G  f W95 扩展 (LBA)</div><div class="line">/dev/sdb5        <span class="number">629153658</span> <span class="number">1564775696</span>  <span class="number">935622039</span> <span class="number">446.1</span>G  <span class="number">7</span> HPFS/NTFS/exFAT</div><div class="line">/dev/sdb6       <span class="number">1564776448</span> <span class="number">1936959487</span>  <span class="number">372183040</span> <span class="number">177.5</span>G <span class="number">83</span> Linux</div><div class="line">/dev/sdb7       <span class="number">1936961536</span> <span class="number">1953523711</span>   <span class="number">16562176</span>   <span class="number">7.9</span>G <span class="number">82</span> Linux 交换 / Solaris</div><div class="line">...</div><div class="line"></div><div class="line">$ sudo gedit /etc/fstab</div><div class="line">... #在文件尾部添加，可以man fstab查看参数定义</div><div class="line">/dev/sdb1 /media/work ntfs defaults <span class="number">0</span> <span class="number">0</span></div></pre></td></tr></table></figure></p>
+<h2 id="文件的颜色">文件的颜色</h2><p>蓝色表示目录；绿色表示可执行文件；红色表示压缩文件；浅蓝色表示链接文件；白色表示其他文件；黄色是设备文件</p>
+<h1 id="网络">网络</h1><h2 id="iftop">iftop</h2><p>查看实时网络流量 interface top<br><code>sudo apt-get install iftop</code> 安装iftop </p>
+<h1 id="关机">关机</h1><p><code>sudo shutdown -h 10</code> 十分钟后关机<br><code>sudo shutdown -h 23:30</code> 下一个23：30关机<br><code>shutdown -h now</code> 立即关机 不要sudo<br><code>reboot</code> 重启</p>
+<h1 id="系统版本">系统版本</h1><p><code>cat /etc/redhat-release</code> Redhat/CentOS Linux release</p>
+<h1 id="flash插件">flash插件</h1><p>chromium安装及flash插件安装, 需使用Pepper Flash Player, Adobe Flash Player无法使用<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">update</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> chromium-browser</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> pepperflashplugin-nonfree</div><div class="line">sudo <span class="keyword">update</span>-pepperflashplugin-nonfree <span class="comment">--install</span></div></pre></td></tr></table></figure></p>
+<h1 id="java安装">java安装</h1><p>先从Oracle官网下载JDK<br>装JDK解压至<code>/usr/lib/jvm</code><br>配置环境变量命令<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$sudo gedit ~<span class="regexp">/.bashrc</span></div><div class="line">添加以下代码：</div><div class="line">export JAVA_HOME=/usr<span class="regexp">/lib/jvm</span><span class="regexp">/jdk1.7.0_79   </span></div><div class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre  </div><div class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/<span class="class"><span class="keyword">lib</span>:$&#123;<span class="title">JRE_HOME</span>&#125;/<span class="title">lib</span>  </span></div><div class="line">export PATH=$&#123;JAVA_HOME&#125;/<span class="symbol">bin:</span>$PATH</div><div class="line"></div><div class="line">激活配置</div><div class="line">source ~<span class="regexp">/.bashrc</span></div><div class="line"></div><div class="line">测试</div><div class="line">java -version</div><div class="line">javac -version</div></pre></td></tr></table></figure></p>
+<h1 id="android环境安装">android环境安装</h1><p>下载Android Studio<br>解压后进入android-studio/bin/<br>运行./studio.sh</p>
+<p>报错:<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Failed <span class="keyword">to</span> <span class="keyword">get</span> <span class="keyword">the</span> adb <span class="built_in">version</span>: Cannot <span class="built_in">run</span> program <span class="string">"adb"</span>: <span class="keyword">error</span>=<span class="number">2</span>, 没有那个文件或目录</div></pre></td></tr></table></figure></p>
+<p>原因:由于是64bit的系统，而Android sdk只有32bit的程序，需要安装lib32<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="keyword">install</span> lib32z1</div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> lib32stdc++<span class="number">6</span></div></pre></td></tr></table></figure></p>
+<p>此外, 编译报错时还要安装SDK Tools里的Android Support Repository</p>
+<h1 id="jekyll安装">jekyll安装</h1><p>安装ruby<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install <span class="keyword">ruby</span></div></pre></td></tr></table></figure></p>
+<p>修改ruby源<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem sources --<span class="built_in">add</span> http<span class="variable">s:</span>//<span class="keyword">ruby</span>.taobao.org/ --<span class="built_in">remove</span> http<span class="variable">s:</span>//rubygems.org/ gem sources -<span class="keyword">l</span></div></pre></td></tr></table></figure></p>
+<p>在ubuntu15.10下安装还需要安装下两步<br><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-<span class="built_in">get</span> install ruby-<span class="built_in">dev</span> </div><div class="line">sudo apt-<span class="built_in">get</span> install zlib1g-<span class="built_in">dev</span></div></pre></td></tr></table></figure></p>
+<p>然后就可以安装了<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem <span class="keyword">install</span> github-pages sudo gem <span class="keyword">install</span> jekyll</div></pre></td></tr></table></figure></p>
+<h1 id="资料搜索方法">资料搜索方法</h1><p><a href="https://github.com/getlantern/lantern" target="_blank" rel="external">https://github.com/getlantern/lantern</a><br><a href="https://github.com/hawx1993/accessing-Google" target="_blank" rel="external">https://github.com/hawx1993/accessing-Google</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ubuntu/" rel="tag">#ubuntu</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/sublime/" rel="next" title="sublime笔记">
+                <i class="fa fa-chevron-left"></i> sublime笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/JQuery/" rel="prev" title="JQuery">
+                JQuery <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="亚木" />
+          <p class="site-author-name" itemprop="name">亚木</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#快捷键"><span class="nav-number">1.</span> <span class="nav-text">快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#launcher自定义sh"><span class="nav-number">1.1.</span> <span class="nav-text">launcher自定义sh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件"><span class="nav-number">2.</span> <span class="nav-text">文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的颜色"><span class="nav-number">2.1.</span> <span class="nav-text">文件的颜色</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络"><span class="nav-number">3.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#iftop"><span class="nav-number">3.1.</span> <span class="nav-text">iftop</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关机"><span class="nav-number">4.</span> <span class="nav-text">关机</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#系统版本"><span class="nav-number">5.</span> <span class="nav-text">系统版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flash插件"><span class="nav-number">6.</span> <span class="nav-text">flash插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java安装"><span class="nav-number">7.</span> <span class="nav-text">java安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#android环境安装"><span class="nav-number">8.</span> <span class="nav-text">android环境安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jekyll安装"><span class="nav-number">9.</span> <span class="nav-text">jekyll安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资料搜索方法"><span class="nav-number">10.</span> <span class="nav-text">资料搜索方法</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">亚木</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
